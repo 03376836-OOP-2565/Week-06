@@ -168,7 +168,7 @@ Console.WriteLine("{0:F1} and {1:F1}", 3.0, 5.0);
 Console.WriteLine("{0:F2} and {1:F2}", 3.0d, 5.0d);
 ```
 - ผลการรัน
-```cs
+```text
 3 and 5
 3 and 5
 3 and 5
@@ -183,6 +183,14 @@ Console.WriteLine($"{3} and {1}");
 Console.WriteLine($"{3.0d} and {1.0001d}");
 Console.WriteLine($"{3:F2} and {1000.123:F1}");
 Console.WriteLine($"{3.123456:F2} and {5.123000:F4}");
+```
+- ผลการรัน
+```text
+3 and 1
+3 and 1
+3 and 1
+3.00 and 1000.1
+3.12 and 5.1230
 ```
 
 #### ชุดที่ 3 ####
@@ -201,6 +209,22 @@ Console.WriteLine($"{1,20}");
 Console.WriteLine($"{1,22}");
 Console.WriteLine($"{1,25}");
 ```
+- ผลการรัน
+```text
+         1111111111222222
+1234567890123456789012345
+1
+ 1
+  1
+   1
+    1
+     1
+          1
+               1
+                    1
+                      1
+                         1
+```
 
 #### ชุดที่ 4 ####
 ```cs
@@ -215,6 +239,19 @@ Console.WriteLine($"   G ==> {i:G}");
 Console.WriteLine($"   N ==> {i:N}");
 Console.WriteLine($"   P ==> {i:P}");
 Console.WriteLine($"   X ==> {i:X}");
+```
+- ผลการรัน
+```text
+Regular string format
+123456789
+String interpreter
+None ==> 123456789
+   E ==> 1.234568E+008
+   F ==> 123456789.000000
+   G ==> 123456789
+   N ==> 123,456,789.00
+   P ==> 12,345,678,900.00 %
+   X ==> 75BCD15
 ```
 
 #### ชุดที่ 5 ####
@@ -231,6 +268,19 @@ Console.WriteLin($"   N ==> {i,20:N}");
 Console.WriteLin($"   P ==> {i,20:P}");
 Console.WriteLin($"   X ==> {i,20:X}");
 ```
+- ผลการรัน
+```text
+Regular string format
+         123456789
+String interpreter
+None ==>             123456789
+   E ==>        1.234568E+008
+   F ==>       123456789.000000
+   G ==>             123456789
+   N ==>         123,456,789.00
+   P ==>      12,345,678,900.00 %
+   X ==>             75BCD15
+```
 
 
 #### ชุดที่ 6 ####
@@ -241,6 +291,14 @@ Console.writLine($"{i,10:F2}");
 Console.writLine($"{i,10:F3}");
 Console.writLine($"{i,10:F4}");
 Console.writLine($"{i,10:F5}");
+```
+- ผลการรัน
+```text
+     123.5
+    123.46
+   123.457
+  123.4568
+ 123.45679
 ```
 
 
@@ -265,6 +323,33 @@ Console.writeLine("Value\tSquared\tCubed");
 for (i = 1; i < 10; i++)
     Console.writeLine($"{i}\t{i*i}\t{i*i*i}");
 Console.WriteLine($"{1234.56789:#.###}.");
+```
+- ผลการรัน
+```text
+Hello there. I said Hello! Hello???
+3 1 2
+Hello World
+Here comes a slash \
+|       999|
+|0000000000|
+The value: 500.
+The value: $500.00.
+12.3457
+$12.35
+1.235E+001
+ffff
+FFFF
+Value	Squared	Cubed
+1	1	1
+2	4	8
+3	9	27
+4	16	64
+5	25	125
+6	36	216
+7	49	343
+8	64	512
+9	81	729
+1234.57.
 ```
 
 ---- 
