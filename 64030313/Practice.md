@@ -148,6 +148,33 @@ Console.writeLine("{0} and {1}", 3.0d, 5.0d);
 Console.writeLine("{0:F1} and {1:F1}", 3.0, 5.0);
 Console.writeLine("{0:F2} and {1:F2}", 3.0d, 5.0d);
 ```
+- ผลการรัน
+```cs
+/home/runner/LoneSubstantialDatasets/main.cs(5,13): error CS0117: 'Console' does not contain a definition for 'writeLine' [/home/runner/LoneSubstantialDatasets/main.csproj]
+/home/runner/LoneSubstantialDatasets/main.cs(6,13): error CS0117: 'Console' does not contain a definition for 'writeLine' [/home/runner/LoneSubstantialDatasets/main.csproj]
+/home/runner/LoneSubstantialDatasets/main.cs(7,13): error CS0117: 'Console' does not contain a definition for 'writeLine' [/home/runner/LoneSubstantialDatasets/main.csproj]
+/home/runner/LoneSubstantialDatasets/main.cs(8,13): error CS0117: 'Console' does not contain a definition for 'writeLine' [/home/runner/LoneSubstantialDatasets/main.csproj]
+/home/runner/LoneSubstantialDatasets/main.cs(9,13): error CS0117: 'Console' does not contain a definition for 'writeLine' [/home/runner/LoneSubstantialDatasets/main.csproj]
+
+The build failed. Fix the build errors and run again.
+exit status 1
+```
+- แก้ไข
+```cs
+Console.WriteLine("{0} and {1}", 3,5);
+Console.WriteLine("{0} and {1}", 3.0,5.0);
+Console.WriteLine("{0} and {1}", 3.0d, 5.0d);
+Console.WriteLine("{0:F1} and {1:F1}", 3.0, 5.0);
+Console.WriteLine("{0:F2} and {1:F2}", 3.0d, 5.0d);
+```
+- ผลการรัน
+```cs
+3 and 5
+3 and 5
+3 and 5
+3.0 and 5.0
+3.00 and 5.00
+```
 
 #### ชุดที่ 2 ####
 ```cs
