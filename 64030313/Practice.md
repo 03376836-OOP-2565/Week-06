@@ -83,19 +83,45 @@ Bool b1 = 0;
 
 3. มีบรรทัดใดบ้าง ที่มีข้อความผิดพลาด 
 ``` text
-    บรรทัดที่ 4: ไม่ได้ประกาศตัวแปร var5 ก่อนนำมาใช้ในการกำหนดค่าให้กับ var4
-    บรรทัดที่ 5: ไม่ได้ใช้ชื่อตัวแปร Int ในการประกาศตัวแปร var6
-    บรรทัดที่ 8: ประกาศตัวแปร var10 และ c1 แต่ไม่ได้ระบุประเภทของตัวแปร c1
-    บรรทัดที่ 9: ไม่สามารถกำหนดค่า False ให้กับตัวแปรประเภท double ได้ เนื่องจาก False เป็นค่าคงที่ประเภท boolean และไม่สามารถแปลงเป็นประเภท double ได้
-    บรรทัดที่ 10: ไม่สามารถกำหนดค่า 0 ให้กับตัวแปรประเภท bool ได้ เนื่องจาก 0 เป็นค่าคงที่ประเภท int และไม่สามารถแปลงเป็นประเภท bool ได้
+บรรทัดที่ 4, 5, 8, 9, 10
 ```
 
 3.1 compiler ฟ้องว่าอะไร
+```dotnetcli
+/home/runner/LoneSubstantialDatasets/main.cs(12,16): error CS1044: Cannot use more than one type in a for, using, fixed, or declaration statement [/home/runner/LoneSubstantialDatasets/main.csproj]
+/home/runner/LoneSubstantialDatasets/main.cs(12,21): error CS1002: ; expected [/home/runner/LoneSubstantialDatasets/main.csproj]
+/home/runner/LoneSubstantialDatasets/main.cs(12,23): error CS1002: ; expected [/home/runner/LoneSubstantialDatasets/main.csproj]
+/home/runner/LoneSubstantialDatasets/main.cs(12,23): error CS1513: } expected [/home/runner/LoneSubstantialDatasets/main.csproj]
+
+The build failed. Fix the build errors and run again.
+exit status 1
+```
 
 3.2 นักศึกษาคิดว่าที่ผิดพลาดนั้นเกิดจากอะไร
-
+``` text
+บรรทัดที่ 4: ไม่ได้ประกาศตัวแปร var5 ก่อนนำมาใช้ในการกำหนดค่าให้กับ var4
+บรรทัดที่ 5: ไม่ได้ใช้ชื่อตัวแปร Int ในการประกาศตัวแปร var6
+บรรทัดที่ 8: ประกาศตัวแปร var10 และ c1 แต่ไม่ได้ระบุประเภทของตัวแปร c1
+บรรทัดที่ 9: ไม่สามารถกำหนดค่า False ให้กับตัวแปรประเภท double ได้ เนื่องจาก False เป็นค่าคงที่ประเภท boolean และไม่สามารถแปลงเป็นประเภท double ได้
+บรรทัดที่ 10: ไม่สามารถกำหนดค่า 0 ให้กับตัวแปรประเภท bool ได้ เนื่องจาก 0 เป็นค่าคงที่ประเภท int และไม่สามารถแปลงเป็นประเภท bool ได้
+```
 3.3 จะแก้ไขให้ถูกต้องได้อย่างไร
+```csharp
+int var = 30;
+int var1;
+int var2, var3;
+int var4 = var5; // ต้องกำหนดค่าให้กับ var5 ก่อนใช้งาน
+int var5 = 50; // เพิ่มตัวแปร var5 เพื่อใช้ใน var4
+int var6 = 2, var7;
+int var8 = 10 * 5;
+int var9 = var;
+int var10; 
+char c1; // ใช้คำว่า char ไม่ใช้ Char และไม่ต้องกำหนดค่าเริ่มต้น
+float f1; // ไม่ต้องกำหนดค่าเริ่มต้น
+double d1 = 0.0; // ใช้ค่าเริ่มต้น 0.0 แทน False
+bool b1 = false; // ใช้คำว่า bool แทน Bool และใช้ค่าเริ่มต้น false แทน 0
 
+```
 ## Project 6.2 การใช้งานตัวแปรใน string interpreter ## 
 
 String interpreter จะช่วยตีความให้ค่าในตัวแปรชนิดต่างๆ กลายเป็น string โดยอัตโนมัติ ดังตัวอย่าง
