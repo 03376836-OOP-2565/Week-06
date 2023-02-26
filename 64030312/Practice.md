@@ -82,12 +82,22 @@ Bool b1 = 0;
 ```
 
 3. มีบรรทัดใดบ้าง ที่มีข้อความผิดพลาด 
+``` text
+2,4,5,8,9,10
+```
 
 3.1 compiler ฟ้องว่าอะไร
+![image](https://user-images.githubusercontent.com/115066208/221413672-4ae55456-6b79-4234-a97e-8db646f86beb.png)
+
 
 3.2 นักศึกษาคิดว่าที่ผิดพลาดนั้นเกิดจากอะไร
+``` text
+ชื่อตัวแปรไม่ถูกต้องตามกฎ
+```
 
 3.3 จะแก้ไขให้ถูกต้องได้อย่างไร
+![image](https://user-images.githubusercontent.com/115066208/221414003-c5c0b7c8-c339-487b-a4ef-960f7bdae3b7.png)
+
 
 ## Project 6.2 การใช้งานตัวแปรใน string interpreter ## 
 
@@ -115,6 +125,14 @@ Console.writeLine("{0} and {1}", 3.0d, 5.0d);
 Console.writeLine("{0:F1} and {1:F1}", 3.0, 5.0);
 Console.writeLine("{0:F2} and {1:F2}", 3.0d, 5.0d);
 ```
+ผล<br>
+![image](https://user-images.githubusercontent.com/115066208/221414425-ab95fd9c-e98b-4734-bc3c-9a84f458a407.png)
+
+แก้ไข<br>
+![image](https://user-images.githubusercontent.com/115066208/221414505-72950f15-8c97-4f55-8c3b-5f9fad33674e.png)
+
+ผลการรันอีกครั้ง<br>
+![image](https://user-images.githubusercontent.com/115066208/221414538-af777a81-a79b-4848-a566-7b4c43540dbb.png)
 
 #### ชุดที่ 2 ####
 ```cs
@@ -124,6 +142,9 @@ Console.WriteLine($"{3.0d} and {1.0001d}");
 Console.WriteLine($"{3:F2} and {1000.123:F1}");
 Console.WriteLine($"{3.123456:F2} and {5.123000:F4}");
 ```
+![image](https://user-images.githubusercontent.com/115066208/221414846-43877c56-a001-4856-b7c3-004e7bf43493.png)
+![image](https://user-images.githubusercontent.com/115066208/221414864-a62d78fc-1677-4476-a260-f241de2a2157.png)
+
 
 #### ชุดที่ 3 ####
 ```cs
@@ -141,6 +162,8 @@ Console.WriteLine($"{1,20}");
 Console.WriteLine($"{1,22}");
 Console.WriteLine($"{1,25}");
 ```
+![image](https://user-images.githubusercontent.com/115066208/221414927-498a0643-8b4f-4b82-b4d2-a9ab8a9ba72d.png)
+
 
 #### ชุดที่ 4 ####
 ```cs
@@ -156,6 +179,8 @@ Console.WriteLine($"   N ==> {i:N}");
 Console.WriteLine($"   P ==> {i:P}");
 Console.WriteLine($"   X ==> {i:X}");
 ```
+![image](https://user-images.githubusercontent.com/115066208/221415028-7c1e9541-c820-4e0a-a378-e3343b3d4be5.png)
+
 
 #### ชุดที่ 5 ####
 ```cs
@@ -171,6 +196,7 @@ Console.WriteLin($"   N ==> {i,20:N}");
 Console.WriteLin($"   P ==> {i,20:P}");
 Console.WriteLin($"   X ==> {i,20:X}");
 ```
+![image](https://user-images.githubusercontent.com/115066208/221415207-6a36b45a-647a-4332-a540-467aae234d6b.png)
 
 
 #### ชุดที่ 6 ####
@@ -182,6 +208,8 @@ Console.writLine($"{i,10:F3}");
 Console.writLine($"{i,10:F4}");
 Console.writLine($"{i,10:F5}");
 ```
+![image](https://user-images.githubusercontent.com/115066208/221415410-2f71a0f0-cd03-4bd3-978e-28e77f542a81.png)
+
 
 
 #### ชุดที่ 6 ####
@@ -206,6 +234,9 @@ for (i = 1; i < 10; i++)
     Console.writeLine($"{i}\t{i*i}\t{i*i*i}");
 Console.WriteLine($"{1234.56789:#.###}.");
 ```
+![image](https://user-images.githubusercontent.com/115066208/221415561-2c377437-940d-4761-a7bb-7f3ade620e6a.png)
+![image](https://user-images.githubusercontent.com/115066208/221415588-fa2d2c74-dfb3-4f6e-a580-765e0381a109.png)
+
 
 ---- 
 
@@ -254,7 +285,17 @@ namespace method_examples
 ### คำถาม ###
 
 1. ผลการทำงานเป็นอย่างไร
+``` text
+error
+```
 
 2. บรรทัดไหนของโปรแกรมที่มี error บ้าง เพราะอะไร
+``` text
+21, 22, 23, 24 ชื่อ class Number ต้องเป็นพิมพ์เล็ก 
+22, 23, 27, 29 เพราะไม่ได้ประกาศตัวแปรใน class ให้เป็น static
+```
 
 3. ถ้าจะให้โปรแกรมทำงานได้ สามารถแก้ไขอย่างไรได้บ้าง
+![image](https://user-images.githubusercontent.com/115066208/221415745-c603706d-f632-41ca-ad95-b1a92112f4df.png)
+![image](https://user-images.githubusercontent.com/115066208/221415759-27675ee2-6b15-44c0-adbf-5280cdac9c2e.png)
+
