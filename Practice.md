@@ -200,7 +200,7 @@ Console.WriteLin($"   P ==> {i,20:P}");
 Console.WriteLin($"   X ==> {i,20:X}");
 ```
 
-![ภาพ](https://user-images.githubusercontent.com/112167732/221604334-e1522cbc-fd2e-4d38-9c2e-e826fe37f9ea.png)
+![ภาพ](https://user-images.githubusercontent.com/112167732/221742582-2aa2e2b4-7241-4cc6-bd35-4f6c14ff02bf.png)
 
 
 #### ชุดที่ 6 ####
@@ -213,7 +213,8 @@ Console.writLine($"{i,10:F4}");
 Console.writLine($"{i,10:F5}");
 ```
 
-![ภาพ](https://user-images.githubusercontent.com/112167732/221604798-70812c66-9bba-4bd5-80ac-97b2b0530d12.png)
+![ภาพ](https://user-images.githubusercontent.com/112167732/221742418-53221c66-7730-48df-8a26-4f8398b46695.png)
+
 
 
 #### ชุดที่ 6 ####
