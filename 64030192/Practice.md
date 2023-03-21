@@ -6,19 +6,19 @@
 |---:|:-------:|-----------|-------|
 |  1.1 | xxx         | ใ ช้ได้  | ไม่มีตัวอักษรที่ละเมิดกฎการตั้งชื่อ
 |  1.2 | null        | ใช้ไม่ได้ | เป็นคำสงวนในภาษา C#
-|  1.3 | _value      |        |        
-|  1.4 | First-name  |        |          
-|  1.5 | Hello!      |        |        
-|  1.6 | w * h       |        |         
-|  1.7 | time        |        |        
-|  1.8 | do          |        |        
-|  1.9 | Do          |        |        
-| 1.10 |  14February |        |        
-| 1.11 |  1adkrabang |        |        
-| 1.12 | Double      |        |        
-| 1.13 | My Car      |        |        
-| 1.14 | my_home     |        |        
-| 1.15 | Int         |        |    
+|  1.3 | _value      |ใ ช้ได้        | ไม่มีตัวอักษรที่ละเมิดกฎการตั้งชื่อ       
+|  1.4 | First-name  |ใช้ไม่ได้        |ห้ามมีตัวดำเนินการอยู่ในชื่อตัวแปร          
+|  1.5 | Hello!      |ใช้ไม่ได้        |ห้ามมีตัวดำเนินการอยู่ในชื่อตัวแปร        
+|  1.6 | w * h       |ใช้ไม่ได้        |ชื่อตัวแปรห้ามเว้นวรรค         
+|  1.7 | time        |ใ ช้ได้        |ไม่มีตัวอักษรละเมิดกฎการตั้งชื่อ        
+|  1.8 | do          |ใช้ไม่ได้        |do เป้นคำสั่งของ loop do while        
+|  1.9 | Do          |ใ ช้ได้        |ไม่มีตัวอักษรละเมิดกฎการตั้งชื่อตัวแปร        
+| 1.10 |  14February |ใช้ไม่ได้        |ชื่อตัวแปรไม่สามรถใช้เลขได้        
+| 1.11 |  1adkrabang |ใช้ไม่ได้        |ห้ามมี . ในชื่อตัวแปร        
+| 1.12 | Double      |ใ ช้ได้        |ไม่มีตัวอักษรละเมิดกฎการตั้งชื่อตัวแปร        
+| 1.13 | My Car      |ใช้ไม่ได้        |ชื่อตัวแปรห้ามเว้นวรรค        
+| 1.14 | my_home     |ใ ช้ได้        |ไม่มีตัวอักษรละเมิดกฎการตั้งชื่อตัวแปร        
+| 1.15 | Int         |ใ ช้ได้        |ไม่มีตัวอักษรละเมิดกฎการตั้งชื่อตัวแปร    
 
 ## 2.  จงบอกชนิดข้อมูลที่สามารถรองรับค่าต่อไปนี้อย่างเหมาะสมพร้อมทั้งใส่ค่าเริ่มต้นตามที่กำหนดให้ ถ้าข้อใดมีหลายตัวแปร ให้ระบุให้ครบ
  
@@ -30,14 +30,35 @@
 ```
 
 2.2 จำนวนนักศึกษาในชั้นเรียนนี้คือ 42 คน
+```csharp
+byte student = 42;
+```
 
 2.3 ระยะห่างจากดวงอาทิตย์ถึงโลกคือ 149,668,992 กิโลเมตร
+```csharp
+uint sun_to_earch = 149668992;
+```
 
 2.4 ชาวนามีวัว 12 ตัว ม้า 68 ตัว และ ไก่ 12,000 ตัว ตามกฎหมาย เมืองนี้อนุญาตให้เลี้ยงสัตว์ที่เท้าได้ไม่เกินครอบครัวละ 200 ตัว (มี 3 ตัวแปร)
+```csharp
+byte cow = 12;
+byte horse = 68;
+ushort chiken = 12000;
+int animal_one_family = 200;
+```
 
 2.5 แดงวัดขนาดของบ้าน พบว่าต้องใช้อิฐจำนวน 1325.8 ชิ้น แต่เมื่อไปถึงร้านก่อสร้าง พบว่าเขาขายอิฐเป็นยก ยกละ 10 ก้อน ไม่ขายเป็นเศษ
+```csharp
+ushort brickstore = 10;
+double brickuse = 1325.8;
+```
 
 2.6 แสงเดินทางด้วยความเร็ว 299,337.984 กิโลเมตรต่อวินาที  ดาวศุกร์ห่างจากดวงอาทิตย์ 108,200,000 กิโลเมตร อยากทราบว่าแสงใช้เวลาในการเดินทางกี่วินาที (มี 3 ตัวแปร)
+```csharp
+double lightspeed = 299337.984;
+float venus_to_sun = 108200000;
+float travel;
+```
 
 
 # งานฝึกเขียนโปรแกรม
@@ -61,13 +82,23 @@ double d1 = False;
 Bool b1 = 0;
 ```
 
-3. มีบรรทัดใดบ้าง ที่มีข้อความผิดพลาด 
+3. มีบรรทัดใดบ้าง ที่มีข้อความผิดพลาด
+``` text
+2,4,5,8,9,10
+``` 
 
-3.1 compiler ฟ้องว่าอะไร
+3.1 compiler ฟ้องว่าอะไร<br>
+![image](https://user-images.githubusercontent.com/115066298/226593439-d139d405-07bc-446f-b34c-33a6b9f5fdbc.png)
+
 
 3.2 นักศึกษาคิดว่าที่ผิดพลาดนั้นเกิดจากอะไร
+``` text
+ชื่อตัวแปรไม่ถูกต้องตามกฎ
+```
 
-3.3 จะแก้ไขให้ถูกต้องได้อย่างไร
+3.3 จะแก้ไขให้ถูกต้องได้อย่างไร<br>
+![image](https://user-images.githubusercontent.com/115066298/226593528-35e34aee-b925-47c6-824d-9ce4a846bf75.png)
+
 
 ## Project 6.2 การใช้งานตัวแปรใน string interpreter ## 
 
@@ -95,6 +126,14 @@ Console.writeLine("{0} and {1}", 3.0d, 5.0d);
 Console.writeLine("{0:F1} and {1:F1}", 3.0, 5.0);
 Console.writeLine("{0:F2} and {1:F2}", 3.0d, 5.0d);
 ```
+![image](https://user-images.githubusercontent.com/115066298/226593811-8cc64bd6-8f54-41b1-be42-b987725f6f9a.png)
+
+edit<br>
+![image](https://user-images.githubusercontent.com/115066298/226593893-39996712-7002-4af0-a51b-8cf1519a1a0a.png)
+
+run<br>
+![image](https://user-images.githubusercontent.com/115066298/226593953-4866be39-4da9-4f5b-844a-e4317b70a91c.png)
+
 
 #### ชุดที่ 2 ####
 ```cs
@@ -104,6 +143,9 @@ Console.WriteLine($"{3.0d} and {1.0001d}");
 Console.WriteLine($"{3:F2} and {1000.123:F1}");
 Console.WriteLine($"{3.123456:F2} and {5.123000:F4}");
 ```
+![image](https://user-images.githubusercontent.com/115066298/226594080-5f85c869-03bc-49b9-861b-2a76bd249f93.png)
+![image](https://user-images.githubusercontent.com/115066298/226594116-0ea692ba-6154-43b9-9894-caa583d07f93.png)
+
 
 #### ชุดที่ 3 ####
 ```cs
@@ -121,6 +163,8 @@ Console.WriteLine($"{1,20}");
 Console.WriteLine($"{1,22}");
 Console.WriteLine($"{1,25}");
 ```
+![image](https://user-images.githubusercontent.com/115066298/226594204-1d8f092b-c86e-4496-aa21-3e4974700fca.png)
+
 
 #### ชุดที่ 4 ####
 ```cs
@@ -136,6 +180,8 @@ Console.WriteLine($"   N ==> {i:N}");
 Console.WriteLine($"   P ==> {i:P}");
 Console.WriteLine($"   X ==> {i:X}");
 ```
+![image](https://user-images.githubusercontent.com/115066298/226594270-a7f395fd-e733-4d33-aca0-83ef45740903.png)
+
 
 #### ชุดที่ 5 ####
 ```cs
@@ -151,6 +197,7 @@ Console.WriteLin($"   N ==> {i,20:N}");
 Console.WriteLin($"   P ==> {i,20:P}");
 Console.WriteLin($"   X ==> {i,20:X}");
 ```
+![image](https://user-images.githubusercontent.com/115066298/226594330-4aade08f-35e5-43a8-8ccf-e0cfcb19fb9c.png)
 
 
 #### ชุดที่ 6 ####
@@ -162,6 +209,8 @@ Console.writLine($"{i,10:F3}");
 Console.writLine($"{i,10:F4}");
 Console.writLine($"{i,10:F5}");
 ```
+![image](https://user-images.githubusercontent.com/115066298/226594380-c1d88cc4-5401-48b6-92d1-80632236a945.png)
+
 
 
 #### ชุดที่ 6 ####
@@ -186,6 +235,9 @@ for (i = 1; i < 10; i++)
     Console.writeLine($"{i}\t{i*i}\t{i*i*i}");
 Console.WriteLine($"{1234.56789:#.###}.");
 ```
+![image](https://user-images.githubusercontent.com/115066298/226594451-484f5f6a-66d8-4a2c-89d0-02598f119bc1.png)
+![image](https://user-images.githubusercontent.com/115066298/226594493-c42e696f-831e-4cba-87fd-5329b6affdde.png)
+
 
 ---- 
 
@@ -233,8 +285,18 @@ namespace method_examples
 
 ### คำถาม ###
 
-1. ผลการทำงานเป็นอย่างไร
+1. ผลการทำงานเป็นอย่างไร<br>
+``` text
+error
+```
 
-2. บรรทัดไหนของโปรแกรมที่มี error บ้าง เพราะอะไร
+2. บรรทัดไหนของโปรแกรมที่มี error บ้าง เพราะอะไร<br>
+``` text
+21, 22, 23, 24 ชื่อ class Number ต้องเป็นพิมพ์เล็ก 
+22, 23, 27, 29 เพราะไม่ได้ประกาศตัวแปรใน class ให้เป็น static
+```
 
-3. ถ้าจะให้โปรแกรมทำงานได้ สามารถแก้ไขอย่างไรได้บ้าง
+3. ถ้าจะให้โปรแกรมทำงานได้ สามารถแก้ไขอย่างไรได้บ้าง<br>
+![image](https://user-images.githubusercontent.com/115066298/226594738-1bcea6bf-34a9-479a-83ea-3469e4736671.png)
+![image](https://user-images.githubusercontent.com/115066298/226594775-018f0786-ac72-45da-b521-63deddc0b21b.png)
+
