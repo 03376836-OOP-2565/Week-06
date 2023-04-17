@@ -83,7 +83,7 @@ Bool b1 = 0;
 ```
 3.1 compiler ฟ้องว่าอะไร
 
-![Lab](./Images/compiler.png)
+![Lab](./Images/Compiler.png)
 
 The build failed. Fix the build errors and run again.
 exit status 1
