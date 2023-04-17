@@ -83,11 +83,7 @@ Bool b1 = 0;
 ```
 3.1 compiler ฟ้องว่าอะไร
 
-```dotnetcli
-/home/runner/LoneSubstantialDatasets/main.cs(12,16): error CS1044: Cannot use more than one type in a for, using, fixed, or declaration statement [/home/runner/LoneSubstantialDatasets/main.csproj]
-/home/runner/LoneSubstantialDatasets/main.cs(12,21): error CS1002: ; expected [/home/runner/LoneSubstantialDatasets/main.csproj]
-/home/runner/LoneSubstantialDatasets/main.cs(12,23): error CS1002: ; expected [/home/runner/LoneSubstantialDatasets/main.csproj]
-/home/runner/LoneSubstantialDatasets/main.cs(12,23): error CS1513: } expected [/home/runner/LoneSubstantialDatasets/main.csproj]
+![Lab](./Images/compiler.png)
 
 The build failed. Fix the build errors and run again.
 exit status 1
@@ -145,30 +141,21 @@ Console.writeLine("{0:F2} and {1:F2}", 3.0d, 5.0d);
 
 ```
 - ผลการรัน
-```cs
-/home/runner/LoneSubstantialDatasets/main.cs(5,13): error CS0117: 'Console' does not contain a definition for 'writeLine' [/home/runner/LoneSubstantialDatasets/main.csproj]
-/home/runner/LoneSubstantialDatasets/main.cs(6,13): error CS0117: 'Console' does not contain a definition for 'writeLine' [/home/runner/LoneSubstantialDatasets/main.csproj]
-/home/runner/LoneSubstantialDatasets/main.cs(7,13): error CS0117: 'Console' does not contain a definition for 'writeLine' [/home/runner/LoneSubstantialDatasets/main.csproj]
-/home/runner/LoneSubstantialDatasets/main.cs(8,13): error CS0117: 'Console' does not contain a definition for 'writeLine' [/home/runner/LoneSubstantialDatasets/main.csproj]
-/home/runner/LoneSubstantialDatasets/main.cs(9,13): error CS0117: 'Console' does not contain a definition for 'writeLine' [/home/runner/LoneSubstantialDatasets/main.csproj]
-The build failed. Fix the build errors and run again.
-exit status 1
-```
+
+![Lab1](./Images/Lab1error.png)
 - แก้ไข
-```cs
-Console.WriteLine("{0} and {1}", 3,5);
-Console.WriteLine("{0} and {1}", 3.0,5.0);
-Console.WriteLine("{0} and {1}", 3.0d, 5.0d);
-Console.WriteLine("{0:F1} and {1:F1}", 3.0, 5.0);
-Console.WriteLine("{0:F2} and {1:F2}", 3.0d, 5.0d);
-```
+
+![Lab1](./Images/Lab1.png)
+
 - ผลการรัน
+![Lab1](./Images/Lab1run.png)
+- อธิบาย Code 
 ```text
-3 and 5
-3 and 5
-3 and 5
-3.0 and 5.0
-3.00 and 5.00
+1.แสดงผลเลข 3 และ 5
+2.แสดงผลเลข 3 และ 5 แบบไม่มีทศนิยมเพราะไม่ประกาศว่าตัวเลขเป็นชนิดที่มีทศนิยม
+3.แสดงผลเลข 3 และ 5 โดยประกาศเป็นชนิด double
+4.แสดงผลเลข 3 และ 5 โดยให้มีทศนิยม 1 ตำแหน่งด้วยคำสั่ง {0:F1} คือ ลำดับที่ 0 ทศนิยม 1 ตำแหน่ง
+5.แสดงผลเลข 3 และ 5 โดยให้มีทศนิยม 1 ตำแหน่งด้วยคำสั่ง {0:F2} คือ ลำดับที่ 0 ทศนิยม 2 ตำแหน่ง
 ```
 #### ชุดที่ 2 ####
 ```cs
@@ -179,12 +166,16 @@ Console.WriteLine($"{3:F2} and {1000.123:F1}");
 Console.WriteLine($"{3.123456:F2} and {5.123000:F4}");
 ```
 - ผลการรัน
+
+![Lab2](./Images/Lab2run.png)
+
+- อธิบาย Code 
 ```text
-3 and 1
-3 and 1
-3 and 1
-3.00 and 1000.1
-3.12 and 5.1230
+1.แสดงผลเลข 3 และ 1 โดยใช้ เครื่องหมาย $ ไว้หน้าเครื่องหมาย แทนการใช้คำสั่ง Console.Write("{0}",55);
+2.เหมือบรรทัดที่ 1 
+3.แสดงตัวเลขโดยกำหนดให้เป็นชนิด double
+4.แสดงเลขโดยแสดงเลขกำหนดให้แสดงทศนิยม 2 ตำแหน่งที่เลข 3 และ ทศนิยม 1 ตำแหน่งที่เลข 1
+5.แสดงเลขโดยแสดงเลขกำหนดให้แสดงทศนิยม 2 ตำแหน่งที่เลข 3 และ ทศนิยม 4 ตำแหน่งที่เลข 5
 ```
 
 #### ชุดที่ 3 ####
@@ -204,20 +195,24 @@ Console.WriteLine($"{1,22}");
 Console.WriteLine($"{1,25}");
 ```
 - ผลการรัน
+
+![Lab3](./Images/Lab3run.png)
+
+- อธิบาย Code 
 ```text
-         1111111111222222
-1234567890123456789012345
-1
- 1
-  1
-   1
-    1
-     1
-          1
-               1
-                    1
-                      1
-                         1
+1.ทำให้ดูว่าสามารถแสดงเลขชิดขวาได้โดยการกด spacebar
+2.เป็นตัวหำหนดตำแหน่งที่ 0 - 25
+3.แสดงเลข 1 ที่ตำแหน่งที่ 0
+4.แสดงเลข 1 ที่ตำแหน่งที่ 1
+5.แสดงเลข 1 ที่ตำแหน่งที่ 2
+6.แสดงเลข 1 ที่ตำแหน่งที่ 3
+7.แสดงเลข 1 ที่ตำแหน่งที่ 4
+8.แสดงเลข 1 ที่ตำแหน่งที่ 5
+9.แสดงเลข 1 ที่ตำแหน่งที่ 10
+10.แสดงเลข 1 ที่ตำแหน่งที่ 15
+11.แสดงเลข 1 ที่ตำแหน่งที่ 20
+12.แสดงเลข 1 ที่ตำแหน่งที่ 22
+13.แสดงเลข 1 ที่ตำแหน่งที่ 25
 ```
 #### ชุดที่ 4 ####
 ```cs
@@ -234,17 +229,22 @@ Console.WriteLine($"   P ==> {i:P}");
 Console.WriteLine($"   X ==> {i:X}");
 ```
 - ผลการรัน
+
+![Lab4](./Images/Lab4run.png)
+
+- อธิบาย Code 
 ```text
-Regular string format
-123456789
-String interpreter
-None ==> 123456789
-   E ==> 1.234568E+008
-   F ==> 123456789.000000
-   G ==> 123456789
-   N ==> 123,456,789.00
-   P ==> 12,345,678,900.00 %
-   X ==> 75BCD15
+1.กำหนดค่าให้ตัวแปร i
+2.แสดงข้อความ regular string format
+3.แสดงค่าในตัวแปร i แบบปกติ
+4.แสดงข้อความ string interpreter
+5.แสดงค่าในตัวแปร i แบบปกติ
+6.แสดงค่าในตัวแปร i แบบปยกกำลัง
+7.แสดงค่าในตัวแปร i แบบทศนิยม 2 ตำแหน่งเนื่องจากไม่ได้ระบุว่าให้แสดงกี่ตำแหน่ง
+8.แสดงค่าในตัวแปร i เลือกแสดงผลในแบบที่เหมาะสมกับค่าที่เลือกที่ระหว่างทศนิยมและยกกำลัง
+9.แสดงค่าในตัวแปร i แบบจำนวนเต็มโดยแบ่งหลักด้วย ,
+10.แสดงค่าในตัวแปร i แบบเปอร์เซ็น
+11.แสดงค่าในตัวแปร i แบบเลขฐาน 16
 ```
 
 #### ชุดที่ 5 ####
@@ -262,19 +262,23 @@ Console.WriteLin($"   P ==> {i,20:P}");
 Console.WriteLin($"   X ==> {i,20:X}");
 ```
 - ผลการรัน
-```text
-Regular string format
-         123456789
-String interpreter
-None ==>             123456789
-   E ==>        1.234568E+008
-   F ==>       123456789.000000
-   G ==>             123456789
-   N ==>         123,456,789.00
-   P ==>      12,345,678,900.00 %
-   X ==>             75BCD15
-```
 
+![Lab5](./Images/Lab5run.png)
+
+- อธิบาย Code 
+```text
+1.กำหนดค่าให้ตัวแปร i
+2.แสดงข้อความ regular string format
+3.แสดงค่าในตัวแปร i แบบปกติโดยให้แสดงผลชิดหวาหรือตำแหน่งที่ 20
+4.แสดงข้อความ string interpreter
+5.แสดงค่าในตัวแปร i แบบปกติโดยให้แสดงผลชิดหวาหรือตำแหน่งที่ 20
+6.แสดงค่าในตัวแปร i แบบปยกกำลังโดยให้แสดงผลชิดหวาหรือตำแหน่งที่ 20
+7.แสดงค่าในตัวแปร i แบบทศนิยม 2 ตำแหน่งเนื่องจากไม่ได้ระบุว่าให้แสดงกี่ตำแหน่งโดยให้แสดงผลชิดหวาหรือตำแหน่งที่ 20
+8.แสดงค่าในตัวแปร i เลือกแสดงผลในแบบที่เหมาะสมกับค่าที่เลือกที่ระหว่างทศนิยมและยกกำลังโดยให้แสดงผลชิดหวาหรือตำแหน่งที่ 20
+9.แสดงค่าในตัวแปร i แบบจำนวนเต็มโดยแบ่งหลักด้วย , โดยให้แสดงผลชิดหวาหรือตำแหน่งที่ 20
+10.แสดงค่าในตัวแปร i แบบเปอร์เซ็นโดยให้แสดงผลชิดหวาหรือตำแหน่งที่ 20
+11.แสดงค่าในตัวแปร i แบบเลขฐาน 16โดยให้แสดงผลชิดหวาหรือตำแหน่งที่ 20
+```
 #### ชุดที่ 6 ####
 ```cs
 const double i = 123.456789;
@@ -285,14 +289,18 @@ Console.writLine($"{i,10:F4}");
 Console.writLine($"{i,10:F5}");
 ```
 - ผลการรัน
-```text
-     123.5
-    123.46
-   123.457
-  123.4568
- 123.45679
-```
 
+![Lab6](./Images/Lab6run.png)
+
+- อธิบาย Code 
+```text
+1.กำหนดค่่าให้ตัวแปร i เป็นชนิด double และเป็นค่าคงที่
+2.แสดงค่าในตัวแปร i เป็นทศนิยม 1 ตำแหน่งและชิดขวาในตำแหน่งที่ 10
+3.แสดงค่าในตัวแปร i เป็นทศนิยม 2 ตำแหน่งและชิดขวาในตำแหน่งที่ 10
+3.แสดงค่าในตัวแปร i เป็นทศนิยม 3 ตำแหน่งและชิดขวาในตำแหน่งที่ 10
+4.แสดงค่าในตัวแปร i เป็นทศนิยม 4 ตำแหน่งและชิดขวาในตำแหน่งที่ 10
+5.แสดงค่าในตัวแปร i เป็นทศนิยม 5 ตำแหน่งและชิดขวาในตำแหน่งที่ 10
+```
 #### ชุดที่ 7 ####
 ```cs
 string name = "Hello";
@@ -316,31 +324,30 @@ for (i = 1; i < 10; i++)
 Console.WriteLine($"{1234.56789:#.###}.");
 ```
 - ผลการรัน
+
+![Lab7](./Images/Lab7run.png)
+
+- อธิบาย Code 
 ```text
-Hello there. I said Hello! Hello???
-3 1 2
-Hello World
-Here comes a slash \
-|       999|
-|0000000000|
-The value: 500.
-The value: $500.00.
-12.3457
-$12.35
-1.235E+001
-ffff
-FFFF
-Value	Squared	Cubed
-1	1	1
-2	4	8
-3	9	27
-4	16	64
-5	25	125
-6	36	216
-7	49	343
-8	64	512
-9	81	729
-1234.57.
+1.กำหนดค่าในตัวแปร name = Hello!
+2.แสดงข้อความ Hello there. I said Hello!Hello??? โดยใช้ Method String.Format() แทน {} ด้วยข้อความในตัวแปร name
+3.แสดงเลข 2 0 1 ไม่ใช่ 3 1 2 เนื่องจากมี $ อยู่หน้า "" ทำให้สามารถใส่ตัวเลขลงไปได้เลยไม่จำเป็นต้อง {0} {1}
+4.แสดงข้อความ Hello World
+5.แสดงข้อความ Here comes to slash \ เพราะใส่ \\ หากใส่ \ แค่ตัวเดียวจะไม่สามารถแสดง \ ได้ 
+6.แสดงเลข 999 ในตำแหน่งที่ 10
+7.แสดงเลข 0 ที่ตำแหน่งที่ 0 เนื่องจาก cmd ไท้ทีตำแหน่งที่ -10
+8.แสดงข้อความ value 500.
+9.แสดงข้อความ value $500.00. เนื่องจาก C ทำให้แสดงเป็นสกุลเงิน
+10.แสดงเลขที่กำหนดพร้อมทศนิยม 4 ตำแหน่งใน
+11.แสดงเป็นเงินสกุลดอลล่าและทศนิยม 2 ตำแหน่ง
+12.แสดงเป็นเลขยกกำลัง
+13.แสดงเป็นเลขฐาน 16 แบบพิมพ์เล็ก
+14.แสดงเป็นเลขฐาน 16 แบบพิมพ์ใหญ่
+15.กำหนดตัวแปร i เป็น int
+16.แสดงข้อความ Value   squared   cubed
+17.กำหนดเงื่อนไขลูปให้ i = 1 ถ้า ให้ทำไปเรื่อยๆจนกว่า i < 10 ให้ i เพิ่มขึ้นทีละ 1
+18.แสดงค่าตัวแรก value = i; squared = i * i;cubed = i * i * i;
+19.แสดงผล 1234.568 โดยใช้ #.### กำหนดให้แสดงผลเป็นทศนิยม 3 ตำแหน่ง
 ```
 ---- 
 
