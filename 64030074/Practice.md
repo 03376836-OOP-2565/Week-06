@@ -141,7 +141,14 @@ Console.writeLine("{0} and {1}", 3.0d, 5.0d);
 Console.writeLine("{0:F1} and {1:F1}", 3.0, 5.0);
 Console.writeLine("{0:F2} and {1:F2}", 3.0d, 5.0d);
 ```
-
+- คำตอบ ชุดที่ 1
+```cs
+Console.WriteLine("{0} and {1}", 3, 5);
+Console.WriteLine("{0} and {1}", 3.0, 5.0);
+Console.WriteLine("{0} and {1}", 3.0d, 5.0d);
+Console.WriteLine("{0:F1} and {1:F1}", 3.0, 5.0);
+Console.WriteLine("{0:F2} and {1:F2}", 3.0d, 5.0d);
+```
 #### ชุดที่ 2 ####
 ```cs
 Console.WriteLine($"{3} and {1}");
@@ -197,7 +204,20 @@ Console.WriteLin($"   N ==> {i,20:N}");
 Console.WriteLin($"   P ==> {i,20:P}");
 Console.WriteLin($"   X ==> {i,20:X}");
 ```
-
+- คำตอบชุดที่ 5
+```cs
+int i = 123456789;
+Console.WriteLine("Regular string format");
+Console.WriteLine("         {0,20}", i);
+Console.WriteLine("String interpreter");
+Console.WriteLine($"None ==> {i,20}");
+Console.WriteLine($"   E ==> {i,20:E}");
+Console.WriteLine($"   F ==> {i,20:F}");
+Console.WriteLine($"   G ==> {i,20:G}");
+Console.WriteLine($"   N ==> {i,20:N}");
+Console.WriteLine($"   P ==> {i,20:P}");
+Console.WriteLine($"   X ==> {i,20:X}");
+```
 
 #### ชุดที่ 6 ####
 ```cs
@@ -208,7 +228,15 @@ Console.writLine($"{i,10:F3}");
 Console.writLine($"{i,10:F4}");
 Console.writLine($"{i,10:F5}");
 ```
-
+- คำตอบชุดที่ 6
+```cs
+const double i = 123.456789;
+Console.WriteLine($"{i,10:F1}");
+Console.WriteLine($"{i,10:F2}");
+Console.WriteLine($"{i,10:F3}");
+Console.WriteLine($"{i,10:F4}");
+Console.WriteLine($"{i,10:F5}");
+```
 
 #### ชุดที่ 6 ####
 ```cs
@@ -230,6 +258,28 @@ int i;
 Console.writeLine("Value\tSquared\tCubed");
 for (i = 1; i < 10; i++)
     Console.writeLine($"{i}\t{i*i}\t{i*i*i}");
+Console.WriteLine($"{1234.56789:#.###}.");
+```
+- คำตอบชุดที่ 6
+```cs
+string name = "Hello";
+Console.WriteLine(String.Format("{0} there. I said {0}! {0}???", name));
+Console.WriteLine($"{2:d} {0:d} {1:d}", 1, 2, 3);
+Console.WriteLine($"Hello " + $"World");
+Console.WriteLine($"Here comes a slash \\");
+Console.WriteLine($"|{999,10}|");
+Console.WriteLine($"|{000,-10}|");
+Console.WriteLine($"The value: {500}.");
+Console.WriteLine($"The value: {500:C}.");
+Console.WriteLine($"{12.3456789,-10:F4}");
+Console.WriteLine($"{12.3456789,-10:C}");
+Console.WriteLine($"{12.3456789,-10:E3}");
+Console.WriteLine($"{65535,-10:x}");
+Console.WriteLine($"{65535,-10:X}");
+int i;
+Console.WriteLine("Value\tSquared\tCubed");
+for (i = 1; i < 10; i++)
+    Console.WriteLine($"{i}\t{i * i}\t{i * i * i}");
 Console.WriteLine($"{1234.56789:#.###}.");
 ```
 
@@ -276,11 +326,58 @@ namespace method_examples
     }
 }
 ```
+- โปรแกรมที่แก้ไขแล้ว
+```cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace method_examples
+{
+    class Number
+    {
+        public static int NumberInt1;
+        public static double NumberDouble1;
+        public int NumberInt2;
+        public double NumberDouble2;
+    }
+
+    class Program
+    {
+        static void Main()
+        {
+            Number.NumberInt1 = 10;
+            Number number = new Number();
+            number.NumberInt2 = 20;
+            Number.NumberDouble1 = 100.500;
+            number.NumberDouble2 = 200.500;
+
+            Console.WriteLine($"NumberInt1 = {Number.NumberInt1}");
+            Console.WriteLine($"NumberInt2 = {number.NumberInt2}");
+            Console.WriteLine($"NumberDouble1 = {Number.NumberDouble1}");
+            Console.WriteLine($"NumberDouble2 = {number.NumberDouble2}");
+        }
+    }
+}
+
+```
 
 ### คำถาม ###
 
 1. ผลการทำงานเป็นอย่างไร
-
+```
+โปรแกรมจะ error
+```
 2. บรรทัดไหนของโปรแกรมที่มี error บ้าง เพราะอะไร
-
+```
+บรรทัดที่ 9
+บรรทัดที่ 10
+บรรทัดที่ 11
+บรรทัดที่ 12
+```
 3. ถ้าจะให้โปรแกรมทำงานได้ สามารถแก้ไขอย่างไรได้บ้าง
+```
+เปลี่ยนชื่อ class ให้ตรงกัน และเปลี่ยนชื่อตัวแปรให้ตรงกับชื่อ class ที่ประกาศไว้
+```
