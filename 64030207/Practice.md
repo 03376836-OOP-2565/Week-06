@@ -242,7 +242,7 @@ Console.WriteLin($"   P ==> {i,20:P}");
 Console.WriteLin($"   X ==> {i,20:X}");
 ```
 
-![Screenshot 2566-02-17 at 18 08 47](https://user-images.githubusercontent.com/115066261/219633507-ae8b21d0-cf4b-4e3c-a54f-2186492b1f7a.png)
+![ภาพ](https://github.com/Sittinon-Sawatdemongkol/Week-06/assets/115066278/c420fe7f-3b90-4f2f-8328-b4bde114dd22)
 
 ```
 1.กำหนดค่าให้ตัวแปร i
