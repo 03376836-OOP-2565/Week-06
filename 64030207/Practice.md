@@ -418,4 +418,4 @@ namespace method_examples
 }
 ```
 
-![Screenshot 2566-02-17 at 19 06 54](https://user-images.githubusercontent.com/115066261/219649680-2670430c-9718-469f-9028-2100d55d7bc9.png)
+![ภาพ](https://github.com/Sittinon-Sawatdemongkol/Week-06/assets/115066278/b352b196-889f-4e8a-bf5c-a880b2b5de97)
