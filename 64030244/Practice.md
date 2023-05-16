@@ -77,7 +77,9 @@ Bool b1 = 0;
 ```
 
 3. มีบรรทัดใดบ้าง ที่มีข้อความผิดพลาด 
-
+```csharp
+ 2, 4, 5, 8, 9, 10
+```
 3.1 compiler ฟ้องว่าอะไร
 
 ![image](https://github.com/CHAIYAPRUK/Week-06/assets/115066395/7e3857cb-6ff3-40d2-964f-99a02214f000)
