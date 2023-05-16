@@ -229,7 +229,8 @@ for (i = 1; i < 10; i++)
 Console.WriteLine($"{1234.56789:#.###}.");
 ```
 สิ่งที่เกิดขึ้น โปรแกรม <br>
-![](./Pictures/Lab6-1.png) <br>
+![image](https://github.com/Poramat45/Week-06/assets/115066249/79a45f27-b99a-4a89-9218-f8c493c9b161)
+
 Code ที่แก้ไขแล้ว
 ```csharp
 using System;
@@ -280,27 +281,25 @@ Console.WriteLine($"   X ==> {i:X}");
 Console.WriteLine('\n');
 
 // ชุด 5 //
-int a = 123456789;
+int c = 123456789;
 Console.WriteLine("Regular string format");
-Console.WriteLine("         {0,20}", a);
+Console.WriteLine("         {0,20}", i);
 Console.WriteLine("String interpreter");
-Console.WriteLine($"None ==> {a,20}");
-Console.WriteLine($"   E ==> {a,20:E}");
-Console.WriteLine($"   F ==> {a,20:F}");
-Console.WriteLine($"   G ==> {a,20:G}");
-Console.WriteLine($"   N ==> {a,20:N}");
-Console.WriteLine($"   P ==> {a,20:P}");
-Console.WriteLine($"   X ==> {a,20:X}");
-Console.WriteLine('\n');
+Console.WriteLine($"None ==> {i,20}");
+Console.WriteLine($"   E ==> {i,20:E}");
+Console.WriteLine($"   F ==> {i,20:F}");
+Console.WriteLine($"   G ==> {i,20:G}");
+Console.WriteLine($"   N ==> {i,20:N}");
+Console.WriteLine($"   P ==> {i,20:P}");
+Console.WriteLine($"   X ==> {i,20:X}");
 
 // ชุด 6 //
-const double b = 123.456789;
-Console.WriteLine($"{b,10:F1}");
-Console.WriteLine($"{b,10:F2}");
-Console.WriteLine($"{b,10:F3}");
-Console.WriteLine($"{b,10:F4}");
-Console.WriteLine($"{b,10:F5}");
-Console.WriteLine('\n');
+const double n = 123.456789;
+Console.WriteLine($"{i,10:F1}");
+Console.WriteLine($"{i,10:F2}");
+Console.WriteLine($"{i,10:F3}");
+Console.WriteLine($"{i,10:F4}");
+Console.WriteLine($"{i,10:F5}");
 
 // ชุด 7 //
 string name = "Hello";
@@ -317,10 +316,10 @@ Console.WriteLine($"{12.3456789,-10:C}");
 Console.WriteLine($"{12.3456789,-10:E3}");
 Console.WriteLine($"{65535,-10:x}");
 Console.WriteLine($"{65535,-10:X}");
-int c;
+int m;
 Console.WriteLine("Value\tSquared\tCubed");
-for (c = 1; c < 10; c++)
-    Console.WriteLine($"{c}\t{c * c}\t{c * c * c}");
+for (i = 1; i < 10; i++)
+    Console.WriteLine($"{i}\t{i * i}\t{i * i * i}");
 Console.WriteLine($"{1234.56789:#.###}.");
 ```
 ---
@@ -371,7 +370,7 @@ namespace method_examples
 ### คำถาม
 
 1. ผลการทำงานเป็นอย่างไร <br>
-![](./Pictures/Lab6-2.png)
+![image](https://github.com/Poramat45/Week-06/assets/115066249/f67e3040-4b31-405e-883f-f0986fbd7676)
  
 2. บรรทัดไหนของโปรแกรมที่มี error บ้าง เพราะอะไร <br>
 โปรแกรมมี error 2 แห่ง คือ
