@@ -4,21 +4,21 @@
 
 | ที่ | ชื่อตัวแปร | ใช้ได้/ไม่ได้ | เหตุผล |
 |---:|:-------:|-----------|-------|
-|  1.1 | xxx         | ใ ช้ได้  | ไม่มีตัวอักษรที่ละเมิดกฎการตั้งชื่อ
+|  1.1 | xxx         | ใช้ได้  | ไม่มีตัวอักษรที่ละเมิดกฎการตั้งชื่อ
 |  1.2 | null        | ใช้ไม่ได้ | เป็นคำสงวนในภาษา C#
-|  1.3 | _value      |        |        
-|  1.4 | First-name  |        |          
-|  1.5 | Hello!      |        |        
-|  1.6 | w * h       |        |         
-|  1.7 | time        |        |        
-|  1.8 | do          |        |        
-|  1.9 | Do          |        |        
-| 1.10 |  14February |        |        
-| 1.11 |  1adkrabang |        |        
-| 1.12 | Double      |        |        
-| 1.13 | My Car      |        |        
-| 1.14 | my_home     |        |        
-| 1.15 | Int         |        |    
+|  1.3 | _value      |  ใช้ได้ |   ไม่มีตัวอักษรที่ละเมิดกฎการตั้งชื่อ     
+|  1.4 | First-name  |  ใช้ไม่ได้  | ห้ามมีตัวดำเนินการอยู่ในชื่อตัวแปร         
+|  1.5 | Hello!      | ใช้ไม่ได้   | ห้ามมีตัวดำเนินการอยู่ในชื่อตัวแปร      
+|  1.6 | w * h       |  ใช้ไม่ได้  | ชื่อตัวแปรห้ามเว้นวรรค   
+|  1.7 | time        |  ใช้ได้    |   ไม่มีตัวอักษรละเมิดกฎการตั้งชื่อ     
+|  1.8 | do          |  ใช้ไม่ได้  | do เป้นคำสั่งของ loop do while       
+|  1.9 | Do          |  ใช้ได้   |   ไม่มีตัวอักษรละเมิดกฎการตั้งชื่อตัวแปร     
+| 1.10 |  14February |  ใช้ไม่ได้   | ชื่อตัวแปรไม่สามรถใช้เลขได้      
+| 1.11 |  1adkrabang |  ใช้ไม่ได้   | ห้ามมี . ในชื่อตัวแปร       
+| 1.12 | Double      | ใช้ได้    |  ไม่มีตัวอักษรละเมิดกฎการตั้งชื่อตัวแปร    
+| 1.13 | My Car      | ใช้ไม่ได้     |ชื่อตัวแปรห้ามเว้นวรรค        
+| 1.14 | my_home     | ใช้ได้    |  ไม่มีตัวอักษรละเมิดกฎการตั้งชื่อตัวแปร      
+| 1.15 | Int         |  ใช้ได้    |ไม่มีตัวอักษรละเมิดกฎการตั้งชื่อตัวแปร 
 
 ## 2.  จงบอกชนิดข้อมูลที่สามารถรองรับค่าต่อไปนี้อย่างเหมาะสมพร้อมทั้งใส่ค่าเริ่มต้นตามที่กำหนดให้ ถ้าข้อใดมีหลายตัวแปร ให้ระบุให้ครบ
  
@@ -65,9 +65,15 @@ Bool b1 = 0;
 
 3.1 compiler ฟ้องว่าอะไร
 
+![image](https://github.com/CHAIYAPRUK/Week-06/assets/115066395/7e3857cb-6ff3-40d2-964f-99a02214f000)
+
+
 3.2 นักศึกษาคิดว่าที่ผิดพลาดนั้นเกิดจากอะไร
 
 3.3 จะแก้ไขให้ถูกต้องได้อย่างไร
+
+![image](https://github.com/CHAIYAPRUK/Week-06/assets/115066395/a378a2a2-5614-4b42-a720-086f36f7a29c)
+
 
 ## Project 6.2 การใช้งานตัวแปรใน string interpreter ## 
 
@@ -96,6 +102,8 @@ Console.writeLine("{0:F1} and {1:F1}", 3.0, 5.0);
 Console.writeLine("{0:F2} and {1:F2}", 3.0d, 5.0d);
 ```
 
+![image](https://github.com/CHAIYAPRUK/Week-06/assets/115066395/9f921388-3fd4-46f6-8250-d2561c79cc81)
+
 #### ชุดที่ 2 ####
 ```cs
 Console.WriteLine($"{3} and {1}");
@@ -104,6 +112,9 @@ Console.WriteLine($"{3.0d} and {1.0001d}");
 Console.WriteLine($"{3:F2} and {1000.123:F1}");
 Console.WriteLine($"{3.123456:F2} and {5.123000:F4}");
 ```
+
+![image](https://github.com/CHAIYAPRUK/Week-06/assets/115066395/115bd0b5-2955-46f6-b990-4a6f35fa72d9)
+
 
 #### ชุดที่ 3 ####
 ```cs
@@ -122,6 +133,9 @@ Console.WriteLine($"{1,22}");
 Console.WriteLine($"{1,25}");
 ```
 
+![image](https://github.com/CHAIYAPRUK/Week-06/assets/115066395/b619e121-8615-492b-bcc1-c9a97e6a59d5)
+
+
 #### ชุดที่ 4 ####
 ```cs
 int i = 123456789;
@@ -136,6 +150,9 @@ Console.WriteLine($"   N ==> {i:N}");
 Console.WriteLine($"   P ==> {i:P}");
 Console.WriteLine($"   X ==> {i:X}");
 ```
+
+![image](https://github.com/CHAIYAPRUK/Week-06/assets/115066395/8ce95ce2-430f-45ba-a7dd-5ff4c2457f73)
+
 
 #### ชุดที่ 5 ####
 ```cs
@@ -152,6 +169,8 @@ Console.WriteLin($"   P ==> {i,20:P}");
 Console.WriteLin($"   X ==> {i,20:X}");
 ```
 
+![image](https://github.com/CHAIYAPRUK/Week-06/assets/115066395/7bcf0a4e-c300-4bf7-a227-00d8f6e9cbf9)
+
 
 #### ชุดที่ 6 ####
 ```cs
@@ -162,6 +181,7 @@ Console.writLine($"{i,10:F3}");
 Console.writLine($"{i,10:F4}");
 Console.writLine($"{i,10:F5}");
 ```
+![image](https://github.com/CHAIYAPRUK/Week-06/assets/115066395/1ec529cc-c76f-4e35-939e-5b24c9193b64)
 
 
 #### ชุดที่ 6 ####
@@ -186,6 +206,7 @@ for (i = 1; i < 10; i++)
     Console.writeLine($"{i}\t{i*i}\t{i*i*i}");
 Console.WriteLine($"{1234.56789:#.###}.");
 ```
+![image](https://github.com/CHAIYAPRUK/Week-06/assets/115066395/6aee14ef-36ce-4029-8929-c0bb31c3bd3d)
 
 ---- 
 
@@ -234,7 +255,48 @@ namespace method_examples
 ### คำถาม ###
 
 1. ผลการทำงานเป็นอย่างไร
+ error
 
 2. บรรทัดไหนของโปรแกรมที่มี error บ้าง เพราะอะไร
 
+21, 22, 23, 24 ชื่อ class Number ต้องเป็นพิมพ์เล็ก 
+22, 23, 27, 29 เพราะไม่ได้ประกาศตัวแปรใน class ให้เป็น static
+
 3. ถ้าจะให้โปรแกรมทำงานได้ สามารถแก้ไขอย่างไรได้บ้าง
+
+```cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace method_examples
+{
+    class number
+    {
+        static public int numberInt1;
+        static public double numberDouble1;
+        static public int numberInt2;
+        static public double numberDouble2;
+    }
+    class Program
+    {
+        static void Main()
+        {
+            number.numberInt1 = 10;
+            number.numberInt2 = 20;
+            number.numberDouble1 = 100.500;
+            number.numberDouble2 = 200.500;
+
+            Console.WriteLine($"NumberInt1 = {number.numberInt1}");
+            Console.WriteLine($"NumberInt2 = {number.numberInt2}");
+            Console.WriteLine($"NumberDouble1 = {number.numberDouble1}");
+            Console.WriteLine($"NumberDouble2 = {number.numberDouble2}");
+        }
+    }
+}
+```
+
+![image](https://github.com/CHAIYAPRUK/Week-06/assets/115066395/962876ab-fba0-4bce-8cc1-6a4ebec19296)
